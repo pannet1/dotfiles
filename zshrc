@@ -1,3 +1,4 @@
+export TMPDIR="/tmp"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -68,7 +69,8 @@ ZSH_THEME_RANDOM_CANDIDATES=( "agnoster" )
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(taskwarrior z zsh-autosuggestions git history vi-mode )
+plugins=(autoenv cp debian dircycle extract per-directory-history taskwarrior z zsh-autosuggestions git history vi-mode composer fasd rsync wd zsh_reload)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,26 +96,29 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-alias zshconfig="vi ~/dotfiles/zshrc"
+alias zshconf="vi ~/dotfiles/zshrc"
+alias vimconf="vi ~/dotfiles/vimrc" 
+alias tmuxconf="vi ~/dotfiles/tmux.conf"						
 alias ohmyzsh="vi ~/.oh-my-zsh"
 alias ide="tmux -f ~/dotfiles/tmux.conf attach"
 alias 1personal="cd /media/pannet1/FAT32/local/1personal;ls -la"
 alias 3linux="cd /media/pannet1/FAT32/local/3linux;ls -la"
 alias library="cd /media/pannet1/FAT32/local/Library;ls -la"
 alias hosting="cd /media/pannet1/FAT32/local/2backup/hosting/home;ls -la"
-alias viconfig="vi ~/dotfiles/vimrc" 
-alias tmuxconfig="vi ~/dotfiles/tmux.conf"						
 alias hint="cd ~/dotfiles/tmux/hints;ls -la"						
 alias 1st="3linux;cd mxlinux;vi _1stRun.sh;sudo bash ./_1stRun.sh"
 alias html="cd /var/www/html;ls -l"
 alias yt="clear;echo 'config file is in ~/.config';youtube-viewer"
 alias ff="find . -type f -name "
 alias fd="find . -type d -name "
-alias activate="source env/bin/activate;which python"
+alias act="source env/bin/activate;which python"
+alias deact="deactivate"
+alias grom="gromit-mpx --key 'w'"
+alias sshv="ssh -v carrierc@ecomsense.in"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 #vim mode
 bindkey -v
 
 # because python global pip install could not find 
-export PATH=$PATH:/home/pannet1/.local/bin
+export PATH=$PATH:/home/pannet1/.local/bin:/usr/local/lib/nodejs:/usr/bin/composer:/home/pannet1/dotfiles:/usr/local/go/bin
