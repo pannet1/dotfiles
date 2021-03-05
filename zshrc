@@ -122,3 +122,4 @@ bindkey -v
 
 # because python global pip install could not find 
 export PATH=$PATH:/home/pannet1/.local/bin:/usr/local/lib/nodejs:/usr/bin/composer:/home/pannet1/dotfiles:/usr/local/go/bin
+
