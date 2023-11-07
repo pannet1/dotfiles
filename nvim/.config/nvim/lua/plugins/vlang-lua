@@ -1,0 +1,8 @@
+return {
+  {
+    "cheap-glitch/vim-v",
+    optional = true,
+    opts = {
+    },
+  },
+}

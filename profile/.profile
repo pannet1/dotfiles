@@ -1,0 +1,2 @@
+export QT_STYLE_OVERRIDE=kvantum
+export PATH=$PATH:$HOME:$HOME/.local/bin

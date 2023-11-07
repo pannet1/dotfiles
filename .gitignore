@@ -1,0 +1,7 @@
+**/bin 
+**/bin/*
+**/.codeium/**
+codeium/*
+repassh/
+repassh/*
+__pycache__
