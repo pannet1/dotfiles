@@ -6,5 +6,6 @@ nm-applet &
 /usr/bin/ibus-daemon -dr &
 # calamares &
 # noisetorch &
-# flameshot &
+flameshot &
+cbatticon -u 5 &
 xfce4-power-manager &
