@@ -9,3 +9,4 @@ nm-applet &
 flameshot &
 cbatticon -u 5 &
 xfce4-power-manager &
+redshift-gtk &

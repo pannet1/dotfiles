@@ -5,3 +5,4 @@ codeium/*
 repassh/
 repassh/*
 __pycache__
+**/rc.xsh

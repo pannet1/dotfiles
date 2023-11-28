@@ -27,6 +27,10 @@ browser = "firefox"
 file_manager = "pcmanfm"
 
 keys = [
+    # Volume
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
+    Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
     # Moving out of range in Columns layout will create new column.
     Key(
         [mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"
@@ -39,7 +43,6 @@ keys = [
     ),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
-    
     # Grow windows. If current window is on the edge of screen and direction
     Key([mod, "control"], "h", lazy.layout.grow_left(), desc="Grow window to the left"),
     Key(
@@ -55,7 +58,6 @@ keys = [
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "space", lazy.layout.next(), desc="Move window focus to other window"),
-
     # Move windows between left/right columns or move up/down in current stack.
     # will be to screen edge - window would shrink.
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
@@ -79,7 +81,12 @@ keys = [
     # Normal keys start
     Key([mod], "b", lazy.spawn(browser), desc="Launch web browser"),
     Key([mod], "c", lazy.spawn("flameshot gui"), desc="Open flameshot gui"),
-    Key([mod], "d", lazy.spawn(f"notify-send '{datetime.now()}'"), desc="Show date and time"),
+    Key(
+        [mod],
+        "d",
+        lazy.spawn(f"notify-send '{datetime.now()}'"),
+        desc="Show date and time",
+    ),
     Key([mod], "f", lazy.spawn(file_manager), desc="Launch File Manager"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key(
@@ -188,15 +195,15 @@ power_widgets: list = [
 ]
 
 widgets_list: list = [
-#     ### Run ###
-#     widget.Sep(linewidth=0, padding=6, background=colors["start"]),
-#     widget.Image(
-#         filename="~/.config/qtile/config/manjaro.png",
-#         margin=5,
-#         background=colors["start"],
-#         mouse_callbacks={"Button1": lambda: os.system("rofi -show drun")},
-#     ),
-#     widget.Sep(linewidth=0, padding=6, background=colors["start"]),
+    #     ### Run ###
+    #     widget.Sep(linewidth=0, padding=6, background=colors["start"]),
+    #     widget.Image(
+    #         filename="~/.config/qtile/config/manjaro.png",
+    #         margin=5,
+    #         background=colors["start"],
+    #         mouse_callbacks={"Button1": lambda: os.system("rofi -show drun")},
+    #     ),
+    #     widget.Sep(linewidth=0, padding=6, background=colors["start"]),
     ### Groups ###
     widget.Sep(linewidth=0, padding=6, background=colors["groups_bg"]),
     widget.GroupBox(
@@ -218,14 +225,13 @@ widgets_list: list = [
         foreground=colors["active"],
         background=colors["groups_bg"],
         font="Jetbrains Mono",
-        prompt="Woof: "
+        prompt="Woof: ",
     ),
     widget.Sep(padding=6, linewidth=0, background=colors["seperator"]),
     widget.Spacer(),
     ### Systray ###
     widget.Systray(background=colors["systray"], padding=10),
     widget.Sep(linewidth=0, padding=6, background=colors["systray"]),
-
     ### Volume ###
     widget.Sep(padding=9, linewidth=0, background=colors["color3"]),
     widget.TextBox(
@@ -268,44 +274,40 @@ widgets_list: list = [
         #        },
     ),
     widget.Clock(
-            foreground=colors["color5fg"],
-            background=colors["color5"],
-            format="%A - %H:%M"
+        foreground=colors["color5fg"], background=colors["color5"], format="%A - %H:%M"
     ),
     widget.Sep(padding=6, linewidth=0, background=colors["color1"]),
     # widget.Sep(padding=6, linewidth=0, background=colors["seperator"]),
-
-    widget.TextBox(                                                
-                                                
-                       text = '',
-                       padding = 0,
-                       fontsize = 28,
-                       foreground='#2f343f',
-                       ),   
-                widget.TextBox(
-                    text='',
-                    mouse_callbacks= {
-                        'Button1':
-                        lambda: qtile.cmd_spawn(os.path.expanduser('~/.config/rofi/powermenu.sh'))
-                    },
-                    foreground='#e39378'
-                ),
-
+    widget.TextBox(
+        text="",
+        padding=0,
+        fontsize=28,
+        foreground="#2f343f",
+    ),
+    widget.TextBox(
+        text="",
+        mouse_callbacks={
+            "Button1": lambda: qtile.cmd_spawn(
+                os.path.expanduser("~/.config/rofi/powermenu.sh")
+            )
+        },
+        foreground="#e39378",
+    ),
 ]
 
 # bar_margin = [int(layout_theme["margin"]/2), layout_theme["margin"], 0, layout_theme["margin"]]
 bar_margin = 0
 
 screen = Screen(
-#     wallpaper=wallpaper,
-#     wallpaper_mode="fill",
+    #     wallpaper=wallpaper,
+    #     wallpaper_mode="fill",
     top=bar.Bar(
-       widgets_list,
-       int(looks["panel-size"]),
-       background=colors["bg"],
-       opacity=float(looks["panel-opacity"]),
-       margin=bar_margin,
-   ),
+        widgets_list,
+        int(looks["panel-size"]),
+        background=colors["bg"],
+        opacity=float(looks["panel-opacity"]),
+        margin=bar_margin,
+    ),
 )
 
 screens = [screen]
@@ -363,7 +365,7 @@ floating_layout = layout.Floating(
         Match(wm_class="gnome-calculator"),
         Match(wm_class="blueberry"),
         Match(wm_class="protonvpn"),
-    ]
+    ],
 )
 
 
@@ -372,13 +374,16 @@ def start_once():
     home = os.path.expanduser("~")
     subprocess.call([home + "/.config/qtile/autostart.sh"])
 
+
 @hook.subscribe.startup
 def runner():
     home = os.path.expanduser("~")
     subprocess.Popen(["xsetroot", "-cursor_name", "left_ptr"])
     subprocess.Popen(["xwallpaper", "--zoom", wallpaper])
 
+
 floating_types = ["notification", "toolbar", "splash", "dialog", "dock"]
+
 
 @lazy.function
 def float_to_front(qtile):
@@ -392,6 +397,7 @@ def float_to_front(qtile):
             window.cmd_bring_to_front()
             floating_windows.append(window)
     floating_windows[-1].cmd_focus()
+
 
 @hook.subscribe.client_killed
 def _unswallow(window):
