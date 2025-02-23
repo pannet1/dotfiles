@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<FileZilla3 version="3.68.1" platform="*nix">
+	<Layout Builddate="2024-12-01" Buildtime="18:12:25">
+		<Resources />
+		<Language id="en_IN" date="1733076745">
+			<Font font="'Cascadia Code 12' 10" width="792" height="19" />
+			<Dialog name="Settings" width="523" />
+		</Language>
+	</Layout>
+</FileZilla3>
