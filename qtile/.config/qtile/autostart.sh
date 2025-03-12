@@ -1,6 +1,6 @@
 #!/bin/bash
 
-feh --bg-scale --auto-zoom /home/pannet1/Pictures/kali.jpg
+feh --bg-scale --auto-zoom /home/pannet1/Pictures/2.png
 picom &
 disown # --experimental-backends --vsync should prevent screen tearing on most setups if needed
 
@@ -13,8 +13,7 @@ disown # --experimental-backends --vsync should prevent screen tearing on most s
 
 nm-applet &
 disown
-blueman-manager &
-disown
+#blueman-manager & disown
 
 ~/.config/qtile/scripts/activity.sh &
 disown

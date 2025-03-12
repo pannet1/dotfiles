@@ -12,7 +12,6 @@ from screen import colors, screens
 def autostart():
     home = os.path.expanduser("~/.config/qtile/autostart.sh")
     subprocess.call([home])
-    subprocess.Popen(["python3", "~/.config/qtile/calender.py"])
 
 
 @hook.subscribe.startup

@@ -22,3 +22,5 @@ eval "$(pyenv init - bash)"
 
 # Load pyenv-virtualenv automatically by adding
 eval "$(pyenv virtualenv-init -)"
+alias top='btop --utf-force'
+alias ls='ls --hyperlink=auto'
