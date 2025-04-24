@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<FileZilla3 version="3.68.1" platform="*nix">
+<FileZilla3 version="3.69.0" platform="*nix">
 	<Settings>
 		<Setting name="Use Pasv mode">1</Setting>
 		<Setting name="Limit local ports">0</Setting>
@@ -126,31 +126,31 @@
 		<Setting name="Remote filelist sortorder">0 0</Setting>
 		<Setting name="Already connected choice">3</Setting>
 		<Setting name="Remote recursive operation list refresh">0</Setting>
-		<Setting name="Greeting version">3.68.1</Setting>
 		<Setting name="Site Manager position">0 427 267 1056 565 </Setting>
 		<Setting name="File associations (v2)" platform="unix">css /usr/bin/windsurf %f
 jpg /usr/bin/feh --start-at %f
 js /usr/bin/windsurf %f
 php /usr/bin/windsurf %f</Setting>
-		<Setting name="Sitemanager last selected">0/naveen</Setting>
-		<Setting name="Window position and size">0 1372 6 1900 972 </Setting>
 		<Setting name="Splitter positions (v2)">50 -248 500000000 251 247 500000000</Setting>
+		<Setting name="Sitemanager last selected">0/harinath</Setting>
+		<Setting name="Window position and size">0 6 36 1900 942 </Setting>
+		<Setting name="Greeting version">3.69.0</Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
 				<Tab connected="1" selected="1">
-					<Host>kumar.ecomsense.in</Host>
+					<Host>narayanan.ecomsense.in</Host>
 					<Port>22</Port>
 					<Protocol>1</Protocol>
 					<Type>0</Type>
-					<User>gunasekaran.naveen</User>
-					<Pass encoding="base64">bmF2ZWVuQDEz</Pass>
+					<User>harinath.l</User>
+					<Pass encoding="base64">aGFyaW5hdGhAMTM=</Pass>
 					<Logontype>1</Logontype>
 					<EncodingType>Auto</EncodingType>
 					<BypassProxy>0</BypassProxy>
-					<Name>naveen</Name>
-					<Site>0/naveen</Site>
-					<RemotePath>1 0 3 var 3 www 7 clients 7 client3 4 web5 4 home 18 gunasekaran.naveen 7 no_venv</RemotePath>
-					<LocalPath>/home/pannet1/Programs/py/angelone/ranga-breakout/</LocalPath>
+					<Name>harinath</Name>
+					<Site>0/harinath</Site>
+					<RemotePath>1 0 3 var 3 www 7 clients 7 client5 4 web8 4 home 10 harinath.l 7 no_venv 15 opening-balance 4 data</RemotePath>
+					<LocalPath>/home/pannet1/Programs/py/finvasia/opening-balance/data/</LocalPath>
 				</Tab>
 			</Tabs>
 		</Setting>

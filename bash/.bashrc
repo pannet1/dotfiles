@@ -24,3 +24,7 @@ eval "$(pyenv init - bash)"
 eval "$(pyenv virtualenv-init -)"
 alias top='btop --utf-force'
 alias ls='ls --hyperlink=auto'
+alias py='python'
+alias ..act='source ../../bin/activate'
+alias .act='source ../bin/activate'
+alias vim='nvim'
