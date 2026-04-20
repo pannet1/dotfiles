@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Secrets & Credentials
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*.secret
+*secret*
+credentials.json
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Cache
+.cache/
+.lazy/
+*.cache
+
+# Build artifacts
+dist/
+build/
+target/
+
+# Temp files
+tmp/
+temp/
+*.tmp
+
+# Plugin data (keep source, exclude built/cached)
+tmux/.config/tmux/plugins/tpm/plugins/
+tmux/.config/tmux/plugins/tpm/tpm
+tmux/.config/tmux/plugins/*/target/
+nvim/.cache/
+nvim/lazy-lock.json
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Secrets detection - fail if these exist
+#AKIA*
+#xox[baprs]-
+#ghp_
