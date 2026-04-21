@@ -1,105 +1,39 @@
 # Alacritty Config - Catppuccin Frappé
 
-font:
-  normal:
-    family: "FiraCode Nerd Font"
-  size: 14
+[font]
+normal.family = "FiraCode Nerd Font"
+size = 14.0
 
-colors:
-  primary:
-    background: '#303446'
-    foreground: '#c6d0f5'
-  cursor:
-    text: '#303446'
-    cursor: '#f2d5cf'
-  vi_mode_cursor:
-    text: '#303446'
-    cursor: '#f2d5cf'
-  search:
-    matches:
-      foreground: '#303446'
-      background: '#a6d189'
-    focused_match:
-      foreground: '#303446'
-      background: '#e5c890'
-  hints:
-    start:
-      foreground: '#303446'
-      background: '#f4b8e4'
-    end:
-      foreground: '#303446'
-      background: '#81c8be'
-  selection:
-    text: '#303446'
-    background: '#f2d5cf'
-  normal:
-    black: '#51576d'
-    red: '#e78284'
-    green: '#a6d189'
-    yellow: '#e5c890'
-    blue: '#8caaee'
-    magenta: '#f4b8e4'
-    cyan: '#81c8be'
-    white: '#b5bfe2'
-  bright:
-    black: '#626880'
-    red: '#e78284'
-    green: '#a6d189'
-    yellow: '#e5c890'
-    blue: '#8caaee'
-    magenta: '#f4b8e4'
-    cyan: '#81c8be'
-    white: '#a5adce'
-  dim:
-    black: '#45475a'
-    red: '#cba6f7'
-    green: '#a6e3a1'
-    yellow: '#f9e2af'
-    blue: '#89b4fa'
-    magenta: '#f5c2e7'
-    cyan: '#94e2d5'
-    white: '#585b70'
+[colors.primary]
+background = "#303446"
+foreground = "#c6d0f5"
 
-window:
-  opacity: 1.0
-  padding:
-    x: 8
-    y: 8
+[colors.selection]
+text = "#303446"
+background = "#f2d5cf"
 
-scrolling:
-  history: 10000
+[colors.normal]
+black = "#51576d"
+red = "#e78284"
+green = "#a6d189"
+yellow = "#e5c890"
+blue = "#8caaee"
+magenta = "#f4b8e4"
+cyan = "#81c8be"
+white = "#b5bfe2"
 
-bell:
-  animation: None
-  color: '#e5c890'
+[colors.bright]
+black = "#626880"
+red = "#e78284"
+green = "#a6d189"
+yellow = "#e5c890"
+blue = "#8caaee"
+magenta = "#f4b8e4"
+cyan = "#81c8be"
+white = "#a5adce"
 
-cursor:
-  style:
-    shape: Block
-    blinking: On
-  unfocused_hollow: true
+[scrolling]
+history = 10000
 
-mouse:
-  hide_when_typing: true
-
-shell:
-  program: /bin/bash
-  args:
-    - -l
-
-keybindings:
-  - { key: N,       mods: Control|Shift, action: SpawnNewInstance }
-  - { key: T,       mods: Control|Shift, action: SpawnNewInstance }
-  - { key: W,       mods: Control|Shift, action: CloseWindow }
-  - { key: Q,       mods: Control|Shift, action: Quit }
-  - { key: Return,  mods: Control|Shift, action: ToggleFullscreen }
-  - { key: F,       mods: Control|Shift, action: SearchForward }
-  - { key: B,       mods: Control|Shift, action: SearchBackward }
-  - { key: C,       mods: Control|Shift, action: Copy }
-  - { key: V,       mods: Control|Shift, action: Paste }
-  - { key: Insert,  mods: Shift,         action: PasteSelection }
-  - { key: Key0,    mods: Control,       action: ResetFontSize }
-  - { key: Equal,   mods: Control,       action: IncreaseFontSize }
-  - { key: Minus,   mods: Control,       action: DecreaseFontSize }
-  - { key: Plus,    mods: Control,       action: IncreaseFontSize }
-  - { key: Underline, mods: Control,    action: IncreaseFontSize }
+[mouse]
+hide_when_typing = true
