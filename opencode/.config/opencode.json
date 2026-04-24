@@ -1,5 +1,12 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "opencode": {
+      "options": {
+        "apiKey": "{env:OPENCODE_ZEN_KEY}"
+      }
+    }
+  },
   "mcp": {
     "chrome-devtools": {
       "type": "local",
